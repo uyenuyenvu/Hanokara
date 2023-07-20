@@ -84,11 +84,150 @@
       </div>
       <div class="v-col-xs-12 v-col-lg-4">
         <div class="listContent">
-          <div class="itemContent">A広告</div>
-          <div class="itemContent">A広告</div>
-          <div class="itemContent">A広告</div>
-          <div class="itemContent">A広告</div>
+          <div class="v-row">
+            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
+            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
+            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
+            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="v-row">
+      <div class="v-col-xs-12 v-col-lg-8">
+        <div class="carouselWrap">
+          <div class="titleBlock">
+            新着情報
+          </div>
+          <div class="newWrap">
+            <div class="itemNew">
+              <div class="avatarNew">
+                <div class="avtDefault">
+                  店舗
+                  <br>
+                  ロゴ
+                </div>
+              </div>
+              <div class="contentNew">
+                <div class="date">2023/05/15</div>
+                <div class="textContent">
+                  テキスト（店名）
+                </div>
+                <div class="textContent">
+                  テキストさんを新規掲載しました！
+                </div>
+              </div>
+            </div>
+            <div class="itemNew">
+              <div class="avatarNew">
+                <div class="avtDefault">
+                  店舗
+                  <br>
+                  ロゴ
+                </div>
+              </div>
+              <div class="contentNew">
+                <div class="date">2023/05/15</div>
+                <div class="textContent">
+                  テキスト（店名）
+                </div>
+                <div class="textContent">
+                  テキストさんを新規掲載しました！
+                </div>
+              </div>
+            </div>
+            <div class="itemNew">
+              <div class="avatarNew">
+                <div class="avtDefault">
+                  店舗
+                  <br>
+                  ロゴ
+                </div>
+              </div>
+              <div class="contentNew">
+                <div class="date">2023/05/15</div>
+                <div class="textContent">
+                  テキスト（店名）
+                </div>
+                <div class="textContent">
+                  テキストさんを新規掲載しました！
+                </div>
+              </div>
+            </div>
+            <div class="itemNew">
+              <div class="avatarNew">
+                <div class="avtDefault">
+                  店舗
+                  <br>
+                  ロゴ
+                </div>
+              </div>
+              <div class="contentNew">
+                <div class="date">2023/05/15</div>
+                <div class="textContent">
+                  テキスト（店名）
+                </div>
+                <div class="textContent">
+                  テキストさんを新規掲載しました！
+                </div>
+              </div>
+            </div>
+            <div class="itemNew">
+              <div class="avatarNew">
+                <div class="avtDefault">
+                  店舗
+                  <br>
+                  ロゴ
+                </div>
+              </div>
+              <div class="contentNew">
+                <div class="date">2023/05/15</div>
+                <div class="textContent">
+                  テキスト（店名）
+                </div>
+                <div class="textContent">
+                  テキストさんを新規掲載しました！
+                </div>
+              </div>
+            </div>
+            <div class="itemNew">
+              <div class="avatarNew">
+                <div class="avtDefault">
+                  店舗
+                  <br>
+                  ロゴ
+                </div>
+              </div>
+              <div class="contentNew">
+                <div class="date">2023/05/15</div>
+                <div class="textContent">
+                  テキスト（店名）
+                </div>
+                <div class="textContent">
+                  テキストさんを新規掲載しました！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="v-col-xs-12 v-col-lg-4">
+      </div>
+    </div>
+    <div class="v-row">
+      <div class="v-col-xs-12 v-col-lg-8">
+        <div class="carouselWrap">
+          <div class="blockImageBottom">
+            <div class="title">
+              【広告】
+            </div>
+            <div class="content">
+              E広告
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="v-col-xs-12 v-col-lg-4">
       </div>
     </div>
   </div>
@@ -206,12 +345,85 @@
     height: 165px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;padding: 0 2rem;
     font-weight: bold;
     font-size: 36px;
     color:black;
     margin-bottom: 20px;
     background-color: #D9D9D9;
+  }
+}
+.newWrap{
+  width: 100%;
+  overflow-y: scroll;
+  padding-top: 20px;
+  height: 610px;
+  .itemNew{
+    display: flex;
+    border-bottom: 2px solid #AFADAD;
+    padding: 20px 0;
+    .avatarNew{
+      width: 73px;
+      height: 73px;
+      border-radius: 50%;
+      background-color: #D9D9D9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-wrap;
+      line-height: 22px;
+      margin-right: 40px;
+    }
+    .contentNew{
+      .date{
+        color: #F37497;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .textContent{
+        color: #181818;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+.blockImageBottom{
+  margin-top: 50px;
+  .title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #AFADAD;
+    margin-bottom: 10px;
+  }
+  .content{
+    height: 300px;
+    width: 100%;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 37px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container{
+    padding: 0;
+  }
+  .carouselWrap{
+    width: 100%;
+  }
+  .carouselItem{
+    height: auto;
   }
 }
 </style>

@@ -16,6 +16,9 @@
     <div class="bottomText">
       Produced by VIETNAM × KARAOKE
     </div>
+    <div class="menuMb">
+      <img src="@/assets/images/menu.png" alt="">
+    </div>
   </div>
   <div class="menuWrap">
     <div class="menuMain">
@@ -39,6 +42,9 @@
   justify-content: center;
   align-items: center;
   padding: 100px 100px 0 100px;
+  .menuMb{
+    display: none;
+  }
   .textBg{
     position: relative;
     width: 185.2px;
@@ -78,6 +84,7 @@
       }
       .item-menu-direction{
         text-decoration: underline;
+        text-decoration-color: #FDEBF0;
       }
     }
   }
@@ -88,6 +95,55 @@
     .item-breadcrumb{
       color: #898888;
       font-weight: 600;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .logoWrap{
+    padding: 40px 10px 20px;
+    position: relative;
+    .topText{
+      font-size: 7px;
+    }
+    .bottomText{
+      font-size: 6px;
+    }
+    .textBg{
+      width: 100px;
+      height: 52px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .title{
+        font-size: 20px;
+      }
+    }
+    .menuMb{
+      position: absolute;
+      background: #f37497;
+      left: 20px;
+      bottom: 20px;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+    }
+  }
+  .menuWrap{
+
+    .menuMain{
+      height: 3px;
+      .menu{
+        display: none;
+
+      }
+    }
+    .breadcrumbs{
+      font-size: 9px;
+      padding-left: 50px;
     }
   }
 }

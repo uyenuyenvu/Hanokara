@@ -10,7 +10,7 @@ import {  RouterView } from 'vue-router'
 
 <style scoped>
   .mainWrap{
-    width: 1440px;
+    max-width: 1440px;
     background: white;
   }
 </style>
