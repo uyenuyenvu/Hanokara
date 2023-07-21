@@ -4,54 +4,54 @@
 
 <template>
 <div class="footerWrap">
-  <div class="listMenu">
-    <div class="itemMenu">
+  <p class="listMenu">
+    <span class="itemMenu">
       <a href="">
         お店をさがす
       </a>
-    </div>
-    <div class="bulkhead">
+    </span>
+    <span class="bulkhead">
       |
-    </div>
-    <div class="itemMenu">
+    </span>
+    <span class="itemMenu">
       <a href="">
         女の子をさがす
       </a>
-    </div>
-    <div class="bulkhead">
+    </span>
+    <span class="bulkhead">
       |
-    </div>
-    <div class="itemMenu">
+    </span>
+    <span class="itemMenu">
       <a href="">
         割引情報
       </a>
-    </div>
+    </span>
     <br class="mb">
-    <div class="bulkhead">
+    <span class="bulkhead pc">
       |
-    </div>
-    <div class="itemMenu">
+    </span>
+    <span class="itemMenu">
       <a href="">
         お問い合わせ
       </a>
-    </div>
-    <div class="bulkhead">
+    </span>
+    <span class="bulkhead">
       |
-    </div>
-    <div class="itemMenu">
+    </span>
+    <span class="itemMenu">
       <a href="">
         プライバシーポリシー
       </a>
-    </div>
-    <div class="bulkhead">
+    </span>
+    <span class="bulkhead">
       |
-    </div>
-    <div class="itemMenu">
+    </span>
+    <span class="itemMenu">
       <a href="">
         掲載について
       </a>
-    </div>
-  </div>
+    </span>
+  </p>
   <div class="textFooter">
     ※当サイトは20歳未満の方の閲覧を固くお断りいたします。また、20歳未満の日本人、及び18歳未満のベトナム人の飲酒は法律で禁じられています。
   </div>
@@ -67,8 +67,7 @@
   background-color: #181818;
   padding: 20px;
   .listMenu{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 50px;
     .itemMenu{
       a{
@@ -100,6 +99,24 @@
 @media only screen and (max-width: 600px) {
   .mb{
     display: block;
+  }
+  .pc{
+    display: none;
+  }
+  .footerWrap{
+    .listMenu{
+      .itemMenu{
+        a{
+          font-size: 9px;
+        }
+      }
+      .bulkhead{
+        font-size: 9px;
+      }
+    }
+    .textFooter{
+      font-size: 6.5px;
+    }
   }
 }
 </style>

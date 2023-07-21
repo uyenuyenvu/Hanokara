@@ -523,14 +523,39 @@
     }
   }
   .newWrap{
+    padding-top: 10px;
+    height: 475px;
     .itemNew{
+      padding: 10px 0;
       .avatarNew{
         margin-left: 10px;
+        font-size: 15px;
+        margin-right: 20px;
+        width: 60px;
+        height: 60px;
+      }
+      .contentNew{
+        .date{
+          font-size: 10px;
+        }
+        .textContent{
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
     }
   }
   .mb{
     display: block;
+  }
+  .blockImageBottom{
+    margin-top: 0;
+    .content{
+      font-size: 32px;
+      height: 150px;
+      margin: 0 30px;
+      width: calc(100% - 60px);
+    }
   }
 }
 </style>
