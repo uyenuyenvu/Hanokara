@@ -3,12 +3,12 @@
     <div class="v-row">
       <div class="v-col-xs-12 v-col-lg-8">
         <div class="carouselWrap">
-          <v-carousel  hide-delimiters>
+          <v-carousel height="auto"  hide-delimiters>
             <template v-slot:prev="{ props }">
-              <img  @click="props.onClick" src="@/assets/images/prev.png" alt="">
+              <img  @click="props.onClick" class="imagePrev" src="@/assets/images/prev.png" alt="">
             </template>
             <template v-slot:next="{ props }">
-              <img  @click="props.onClick" src="@/assets/images/next.png" alt="">
+              <img  @click="props.onClick"  class="imagePrev"  src="@/assets/images/next.png" alt="">
             </template>
             <v-carousel-item
                 v-for="item in [1,2,3]"
@@ -18,7 +18,7 @@
               <v-sheet
                   height="100%"
               >
-                <div class="carouselItem">
+                <div class="carouselItem"   >
                   <img class="imageCarousel" src="@/assets/images/image1.png" alt="">
                   <div class="titleCarousel-stroker">
                     クローズアップ広告は3つの広告写真を載せる。<br>アクセス時にランダムで表示され、スライドショーにする。
@@ -50,7 +50,7 @@
           <div class="titleBlock">
             メインメニュー
           </div>
-          <div class="block-radius padding-20px">
+          <div class="block-radius padding-20px margin-10-mb">
             <div class="imageStyle1">
               <img src="@/assets/images/image2.png">
             </div>
@@ -84,12 +84,13 @@
       </div>
       <div class="v-col-xs-12 v-col-lg-4">
         <div class="listContent">
-          <div class="v-row">
-            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
-            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
-            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
-            <div class="v-col-lg-12 v-col-xs-6 itemContent">A広告</div>
-          </div>
+          <div class="titleContent">【広告】</div>
+          <v-row class="margin-top-0 margin-10-mb" no-gutters>
+            <div class="v-col-lg-12 v-col-md-12 v-col-sm-6 v-col-6 "><div class="itemContent">A広告</div></div>
+            <div class="v-col-lg-12 v-col-md-12 v-col-sm-6 v-col-6 "><div class="itemContent">A広告</div></div>
+            <div class="v-col-lg-12 v-col-md-12 v-col-sm-6 v-col-6 "><div class="itemContent">A広告</div></div>
+            <div class="v-col-lg-12 v-col-md-12 v-col-sm-6 v-col-6 "><div class="itemContent">A広告</div></div>
+          </v-row>
         </div>
       </div>
     </div>
@@ -234,7 +235,10 @@
 </template>
 <style lang="scss" scoped>
 .container{
-  padding: 20px 100px;
+  padding: 50px 100px;
+}
+.mb{
+  display: none;
 }
 .carouselWrap{
   width: calc(100% - 50px)
@@ -341,11 +345,21 @@
 }
 .listContent{
   margin-left: 50px;
+  position: relative;
+  .titleContent{
+    position: absolute;
+    top: -5px;
+    color: #AFADAD;
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+  }
   .itemContent{
     height: 165px;
     display: flex;
     justify-content: center;
-    align-items: center;padding: 0 2rem;
+    align-items: center;
+    padding: 0 2rem;
     font-weight: bold;
     font-size: 36px;
     color:black;
@@ -415,6 +429,9 @@
     align-items: center;
   }
 }
+.margin-top-0{
+  margin-top: 0;
+}
 @media only screen and (max-width: 600px) {
   .container{
     padding: 0;
@@ -423,7 +440,97 @@
     width: 100%;
   }
   .carouselItem{
-    height: auto;
+    padding: 0 30px;
+    background-image: url(/src/assets/images/image3.png);
+    background-position: 100% 100%;
+    background-size: cover;
+  }
+  .titleCarousel-stroker{
+    font-size: 11px;
+    top: 10px;
+    left: 40px;
+    line-height: 20px;
+    max-width: 90%;
+  }
+  .titleCarousel{
+    font-size: 11px;
+    top: 10px;
+    line-height: 20px;
+    left: 40px;
+    max-width: 90%;
+  }
+  .imagePrev{
+    width: 15px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .descriptionCarousel{
+    justify-content: center;
+    .textWrap{
+      display: none;
+    }
+    .btn-wrap{
+      .btn-pink{
+        font-size: 10px;
+      }
+    }
+  }
+  .titleBlock{
+    font-size: 12px;
+    text-align: center;
+  }
+  .padding-20px{
+    padding: 10px;
+  }
+  .block-radius{
+    box-shadow: 0 4.63px 4.63px 4.63px #00000052;
+    .title-block-radius{
+      font-size: 18.5px;
+    }
+  }
+  .margin-10-mb{
+    margin: 10px;
+  }
+  .margin-0-mb{
+    margin: 0;
+  }
+  .listContent{
+    margin: 0;
+  }
+  .imageStyle1{
+    padding: 3px 3px 0;
+    border-radius: 10px;
+    img{
+      border-radius: 10px;
+    }
+  }
+  .listContent{
+    .itemContent{
+      border: 1px solid black;
+      font-size: 20.3px;
+      &:nth-child(even){
+        margin: 10px 10px 10px 0;
+      }
+      &:nth-child(odd){
+        margin: 10px;
+
+      }
+    }
+  }
+  :deep{
+    .v-window__controls{
+      padding: 0 5px!important;
+    }
+  }
+  .newWrap{
+    .itemNew{
+      .avatarNew{
+        margin-left: 10px;
+      }
+    }
+  }
+  .mb{
+    display: block;
   }
 }
 </style>

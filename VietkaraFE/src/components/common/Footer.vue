@@ -26,6 +26,7 @@
         割引情報
       </a>
     </div>
+    <br class="mb">
     <div class="bulkhead">
       |
     </div>
@@ -91,6 +92,14 @@
     margin-bottom: 20px;
     font-size: 14px;
     font-weight: bold;
+  }
+}
+.mb{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .mb{
+    display: block;
   }
 }
 </style>
