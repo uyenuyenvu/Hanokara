@@ -1,9 +1,11 @@
-<template>
-<h1>test</h1>
-</template>
-
-<script>
+<script setup>
+import Header from '../components/common/Header.vue'
+import Content from '../components/storeSearchPage/index.vue'
+import Footer from '../components/common/Footer.vue'
 </script>
 
-<style lang="scss">
-</style>
+<template>
+    <Header />
+  <Content />
+  <Footer />
+</template>

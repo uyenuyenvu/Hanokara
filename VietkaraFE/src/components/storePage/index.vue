@@ -106,10 +106,152 @@
             システム
         </div>
         <div class="discount">
-            <div class="discountTitle">店名</div>
-            <div class="contentDiscount">CLUB ALICE</div>
+            <div class="discountTitle">カウンターチャージ</div>
+            <div class="contentDiscount">
+              1時間：X00,000vnd
+              <br> 
+              FREE：X,000,000vnd（0時まで）
+            </div>
+            <div class="discountTitle">ルームチャージ</div>
+            <div class="contentDiscount">
+              1時間：X00,000vnd
+              <br> 
+              FREE：X,000,000vnd（0時まで）
+            </div>
+            <div class="discountTitle">各種グラス</div>
+            <div class="contentDiscount">
+              1グラス：X00,000vnd～
+            </div>
+            <div class="discountTitle">1グラス：X00,000vnd～</div>
+            <div class="contentDiscount">
+              1ボトル：X,000,000vnd～
+            </div>
+            <div class="discountTitle">キャストドリンク</div>
+            <div class="contentDiscount">
+              キャストドリンク
+            </div>
+            <hr>
         </div>
-    </div>
+
+        <div class="titleBlock">
+            割引情報
+        </div>
+        <div class="present">
+            <div class="presentTitle">CLUB ALICE キャンペーン！（割引名)</div>
+            <div class="contentPresent">
+              <span>期間：X月X日～X月XX日</span><br>
+              【１日先着２組様限定】<br>
+              ご来店時に「ベトカラ見た！」で<br>
+              ウイスキーボトルを１本プレゼントいたします♪
+            </div>
+            <hr>
+        </div>
+
+        
+        <div class="titleBlock">
+            イベント
+        </div>
+        <div class="present event">
+            <div class="presentTitle">お客様感謝デー♪（イベント名）</div>
+            <div class="contentPresent">
+              <span>X月XX日 (X)</span><br>
+              イベント内容イベント内容イベント内容イベント内容イベント内容イベント内容イベント内容イベント内容イベント内容イベント内容イベント
+            </div>
+            <hr>
+        </div>
+
+        <div class="titleBlock">
+            CLUB ALICE：店内写真
+        </div>
+        <div class="storePhotos">
+            <div class="photos">
+              <div class="v-row">
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+                <div class="v-col-3 p0">
+                  <div class="photo">
+                    <img src="" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-all-actor"><u> すべてのキャストを見る </u></button>
+        </div>
+        
+        <div class="titleBlock">
+            CLUB ALICE：グループ系列店
+        </div>
+        <div class="newWrap">
+          <div class="itemNew">
+            <div class="avatarNew">
+              <div class="avtDefault">
+                店舗
+                <br>
+                ロゴ
+              </div>
+            </div>
+            <div class="contentNew">
+              <div class="textTitle">
+                キンマー【各エリア】・カラオケ【カテゴリ】
+              </div>
+              <div class="textContent">
+                店名（あいうえお順）
+              </div>
+            </div>
+          </div>
+          <div class="itemNew">
+            <div class="avatarNew">
+              <div class="avtDefault">
+                店舗
+                <br>
+                ロゴ
+              </div>
+            </div>
+            <div class="contentNew">
+              <div class="textTitle">
+                キンマー【各エリア】・カラオケ【カテゴリ】
+              </div>
+              <div class="textContent">
+                店名（あいうえお順）
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-all-actor"><u> 【店名】に戻る </u></button>
+      </div>
     </div>
   </div>
 </template>
@@ -126,8 +268,20 @@
         left: 2px;
     }
 }
+.p0{
+  padding: 0;
+}
 hr{
     margin-top: 20px;
+}
+.photos{
+    width: 80%;
+    margin: auto;
+}
+.photo{
+    background-color: #D9D9D9;
+    height: 84px;
+    margin: 5px;
 }
 .cards{
     width: 91%;
@@ -152,7 +306,59 @@ hr{
   padding: 8px 10px;
   height: 29px;
 }
+.present {
+  margin-bottom: 50px;
+    .presentTitle{
+        background-color: #F37497;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding: 8px 10px;
+        height: 29px;
+    }
+    .contentPresent{
+        font-weight: bold;
+        font-size: 17px;
+        color: #0A0A0A;
+        font-weight: bold;
+        padding: 10px 0 10px 20px;
+        span{
+          font-weight: bold;
+          color: #FF0404;
+        }
+    }
+}
+.event {
+  .presentTitle{
+    font-size: 12px;
+  }
+  .contentPresent{
+    padding: 10px 20px 10px 20px;
+    font-size: 11.02px;
+    span{
+      font-size: 15px;
+    }
+  }
+}
+.discount {
+  margin-bottom: 50px;
+    .discountTitle{
+        background-color: #F37497;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding: 8px 10px;
+        height: 29px;
+    }
+    .contentDiscount{
+        font-size: 15px;
+        color: #0A0A0A;
+        font-weight: bold;
+        padding: 10px 0 10px 20px;
+    }
+}
 .infor {
+  margin-bottom: 50px;
     .inforTitle{
         background-color: #F37497;
         font-size: 12px;
@@ -168,7 +374,6 @@ hr{
         padding: 10px 0 10px 20px;
     }
 }
-   
 .btn-all-actor{
     width: 55%;
     font-size: 10px;
@@ -177,7 +382,7 @@ hr{
     color: #F37497;
     border-radius: 25px;
     margin: auto;
-    margin: 50px 22.5% 0 22.5%;
+    margin: 50px 22.5% 50px 22.5%;
     u{
         font-weight: bold;
     }
@@ -320,7 +525,6 @@ hr{
   width: 100%;
   overflow-y: scroll;
   padding-top: 20px;
-  height: 610px;
   .itemNew{
     display: flex;
     border-bottom: 2px solid #AFADAD;
@@ -339,9 +543,12 @@ hr{
       white-space: pre-wrap;
       line-height: 22px;
       margin-right: 40px;
+      .avtDefault{
+        font-weight: bold;
+      }
     }
     .contentNew{
-      .date{
+      .textTitle{
         color: #F37497;
         font-size: 13px;
         line-height: 16px;
@@ -429,7 +636,9 @@ hr{
   }
   .titleBlock{
     font-size: 12px;
+    padding: 8px 50px;
     text-align: center;
+    margin-bottom: 20px;
   }
   .padding-20px{
     padding: 10px;
@@ -476,7 +685,6 @@ hr{
   }
   .newWrap{
     padding-top: 10px;
-    height: 475px;
     .itemNew{
       padding: 10px 0;
       .avatarNew{
