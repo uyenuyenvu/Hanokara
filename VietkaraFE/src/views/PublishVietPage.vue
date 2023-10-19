@@ -1,6 +1,6 @@
 <script setup>
 import Header from '../components/common/Header.vue'
-import Content from '../components/aboutView/index.vue'
+import Content from '../components/publishVietPage/index.vue'
 import Footer from '../components/common/Footer.vue'
 </script>
 

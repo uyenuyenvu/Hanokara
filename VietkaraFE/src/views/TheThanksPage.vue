@@ -1,6 +1,6 @@
 <script setup>
 import Header from '../components/common/Header.vue'
-import Content from '../components/aboutView/index.vue'
+import Content from '../components/thankPage/index.vue'
 import Footer from '../components/common/Footer.vue'
 </script>
 
@@ -9,4 +9,3 @@ import Footer from '../components/common/Footer.vue'
   <Content />
   <Footer />
 </template>
-
