@@ -83,8 +83,7 @@ import { mdiMenu } from '@mdi/js';
         <div class="item-menu item-menu-direction"><router-link to="/">ホーム</router-link></div>
         <div class="item-menu item-menu-direction"><router-link to="/store-search">お店を探す</router-link></div>
         <div class="item-menu item-menu-direction"><router-link to="/cast-search">女の子を探す</router-link></div>
-        <div class="item-menu item-menu-direction"><router-link to="/discount">割引情報</router-link></div>
-        <div class="item-menu item-menu-direction"><router-link to="/contact">お問い合わせ</router-link></div>
+        <div class="item-menu item-menu-direction"><router-link to="/discount">割引情報</router-link></div><div class="item-menu item-menu-direction"><router-link to="/contact">お問い合わせ</router-link></div>
       </div>
     </div>
     <div class="breadcrumbs">
@@ -218,8 +217,7 @@ import { mdiMenu } from '@mdi/js';
       align-items: center;
       padding-top: 3px;
       .item-menu{
-        font-size: 14px;
-        a{
+        font-size: 14px;a{
           color: #FDEBF0;
           font-weight: bold;
           text-decoration: none;

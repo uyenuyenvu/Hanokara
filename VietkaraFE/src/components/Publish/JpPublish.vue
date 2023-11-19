@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="underLine">
+        <div class="underLineContent">
             ハノカラのコンテンツ一覧
         </div>
         <div class="listContent">
@@ -115,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="underLine">
+        <div class="underLineContentFee">
             掲載料金
         </div>
         <div class="textPostingFee">
@@ -320,6 +320,34 @@ export default {
         text-underline-offset: 10px;
     }
 
+    .underLineContent {
+        font-size: 25.6px;
+        font-weight: bold;
+        color: #000;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+        text-decoration-color: #FF789D;
+        text-decoration-thickness: 5px;
+        line-height: 66px;
+        text-underline-offset: 10px;
+    }
+
+    .underLineContentFee {
+        font-size: 25.6px;
+        font-weight: bold;
+        color: #000;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+        text-decoration-color: #FF789D;
+        text-decoration-thickness: 5px;
+        line-height: 66px;
+        text-underline-offset: 10px;
+    }
+
     .checkListNote {
         width: 100%;
         border: 4.18px solid #FF789D;
@@ -335,8 +363,8 @@ export default {
 
             .textCheckList {
                 font-size: 18.1px;
-                font-weight: bold;
                 color: black;
+                font-weight: bold;
             }
         }
     }
@@ -437,56 +465,118 @@ export default {
     .Form {
         margin-top: 40px;
     }
-    .feedback{
-      padding: 13px 23px 24px 21px;
-      margin-bottom: 63px;
-      .instruct{
-        margin-bottom: 40px;
-        font-size: 12px;
-      }
+
+    .textPostingFee {
+        margin: 14px 20px 41px 20px;
+        font-size: 19px;
     }
-    .textPostingFee{
-      margin-bottom: 53px;
+
+    .mJ {
+        margin-left: 14px;
     }
-    .listContent{
-      .itemContent{
-        width: auto;
-        margin: 10px 15px;
-        img{
-          margin: 8px 17px 7px 0;
+
+    .flag {
+        .itemLang {
+            margin: 0;
+
+            img {
+                margin: 8px 0 5px 8px;
+
+            }
+
+            p {
+                font-size: 6px;
+                margin-top: -10px;
+                margin-left: 8px;
+            }
         }
-        .textContent{
-          width: -webkit-fill-available;
-          color: black;
-          font-size: 19.7px;
-          text-align: center;
-          font-weight: bold;
-        }
-      }
+
+        .inactive {}
     }
+
+    .listContent {
+        .itemContent {
+            width: auto;
+            margin: 10px 26px -14px 28px;
+            padding: 2px;
+
+            img {
+                margin-left: 12px;
+            }
+
+            .textContent {
+                color: black;
+                font-size: 17px;
+                font-weight: bold;
+                margin: auto;
+                padding-top: 5px;
+            }
+        }
+    }
+
     .instruct {
         font-size: 12px;
     }
 
     .checkListNote {
         width: auto !important;
-        padding: 22px 15px !important;
-        margin: 0 25px 97px 25px;
+        padding: 9px 0 !important;
+        margin: 0 25px 0 28px;
 
         .itemCheckList {
             img {
-                margin: 0 0 27px 13px;
+                padding-bottom: 8px;
+                width: 36px;
+                margin-left: 7px;
+                margin-top: 11px;
+                margin-right: 0 !important;
+            }
+
+            .textCheckList {
+                font-size: 12px !important;
+                line-height: 17px;
+                padding-top: 8px;
+                padding-left: 4px;
             }
         }
     }
 
     .underLine {
-        margin-top: 95px !important;
-        margin-bottom: 45px !important;
+        line-height: 42px !important;
+        margin-top: 42px !important;
+        margin-bottom: 24px !important;
+        font-size: 16px !important;
+    }
+
+    .underLineContent {
+        line-height: 42px !important;
+        margin-top: 83px !important;
+        margin-bottom: 23px !important;
+        font-size: 20px !important;
+    }
+
+    .underLineContentFee {
+        line-height: 42px !important;
+        margin-top: 102px !important;
+        margin-bottom: 40px !important;
+        font-size: 20px !important;
+    }
+
+    .feedback {
+        margin: 28px 31px 66px 31px;
+        width: auto;
+        padding: 12px 25px;
+
+        .instruct {
+            margin-bottom: 36px;
+            font-size: 11px;
+            line-height: initial;
+        }
+
     }
 
     .Form-Item {
-        padding: 13px 0;
+        padding: 10px 0;
         display: flex;
     }
 
@@ -494,25 +584,30 @@ export default {
         max-width: inherit;
         display: flex;
         align-items: center;
-        font-size: 9px;
+        width: 234px;
+        font-size: 10px;
     }
 
     .Form-Item-Label.isMsg {
-        margin-top: 0;
+        margin-top: 7px;
     }
 
     .Form-Item-Label-Required {
         border-radius: 4px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        width: 32px;
-        font-size: 8px;
+        margin-top: 0px;
+        padding: 2px;
+        width: 37px;
+        font-size: 6px;
+        margin-left: -1px;
     }
 
     .Form-Item-Input {
         margin-left: 0;
         flex: inherit;
         font-size: 8px;
+        line-height: 21px;
+        padding: 0 5px;
+        height: max-content;
     }
 }
 
@@ -532,9 +627,9 @@ export default {
 
 @media screen and (max-width: 600px) {
     .Form-Item-Textarea {
-        margin-top: 18px;
+        margin-top: 16px;
         margin-left: 0;
-        height: 150px;
+        height: 95px;
         flex: inherit;
         font-size: 8px;
     }
@@ -567,11 +662,23 @@ export default {
         padding: 0;
     }
 
+    .buttonWrap {
+        .buttonWrap {
+            border-radius: 6px;
+    padding: 5px 27px;
+    display: inline-block;
+    text-align: center;
+    background: #FF789D;
+    color: #fff;
+    font-size: 9px;
+        }
+    }
+
     .titleBlock {
-        font-size: 12px;
-        padding: 8px 50px;
+        font-size: 12.83px;
+        padding: 5px 0;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     .newWrap {
