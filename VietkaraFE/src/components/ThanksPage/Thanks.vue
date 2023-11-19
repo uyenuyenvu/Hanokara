@@ -13,6 +13,38 @@
     </div>
   </div>
 </template>
+<script>
+import {mapMutations} from 'vuex'
+
+export default {
+  data () {
+    return {
+    };
+  },
+  methods:{
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_ThankPage.png')
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  mounted() {
+    this.UPDATE_BREADCRUMBS([
+      {
+        title: 'ホーム >> お問い合わせ >> お問い合わせ完了画面'
+      }
+    ])
+    this.handleResize()
+  }
+}
+</script>
 <style lang="scss" scoped>
 .container{
   padding: 50px 100px;
@@ -82,6 +114,9 @@
   .margin-0-mb{
     margin: 0;
   }
+  .back{
+    margin: 82px 0 135px 0;
+  }
   .listContent{
     margin: 0;
   }
@@ -108,9 +143,11 @@
     .thanks{
         font-size:18.78px;
         width: 65%;
+        color: #000;
     }
     .uploadTitle{
         font-size: 25px;
+        margin: 141px 0 49px 0;
         hr{
             margin-left: 25%;
         }

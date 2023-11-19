@@ -2,8 +2,18 @@
 import {mapMutations} from 'vuex'
 export default {
   methods:{
-    ...mapMutations(['UPDATE_BREADCRUMBS'])
-
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_About.png')
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
   },
   mounted() {
     this.UPDATE_BREADCRUMBS([
@@ -15,6 +25,7 @@ export default {
         title: 'プライバシーポリシー',
       }
     ])
+    this.handleResize()
   }
 }
 </script>
@@ -61,6 +72,7 @@ export default {
     font-size: 16.77px;
     font-weight: 500;
     padding: 10px;
+    color: #000;
 }
 .uploadTitle{
     font-size: 30px;
@@ -115,6 +127,9 @@ export default {
     padding: 0;
     width: 100%;
   }
+  .titleBlock{
+    margin: 22px 0 38px 0;
+  }
   .margin-10-mb{
     margin: 10px;
   }
@@ -138,6 +153,10 @@ export default {
   }
   .mb{
     display: block;
+  }
+  .privacyPolicy{
+    padding: 0 19px;
+    margin-bottom: 80px;
   }
     .btn-all-actor{
         margin-bottom: 50px;
