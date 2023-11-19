@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="v-row">
-      <div class="v-col-xs-12 v-col-lg-8 v-col-md-8">
+      <div class="v-col-xs-12 v-col-lg-8 p0 v-col-md-8">
         <div class="adBanner">
         <div class="title">【広告】</div>
-        <div class="content"> Fバナー広告 </div>
+        <div class="content"> Hバナー広告 </div>
       </div>
         <div class="carouselWrap">
           <div class="titleBlock">
@@ -174,6 +174,9 @@ export default {
 }
 .container{
   padding: 50px 100px;
+}
+.p0{
+  padding: 0;
 }
 .mb{
   display: none;
@@ -439,13 +442,26 @@ export default {
   .container{
     padding: 0;
   }
-
+  .backShop{
+    font-size: 10px;
+    width: 40%;
+    padding: 10px 0;
+    a{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+  .note{
+    padding-left: 32px;
+    margin-top: 2px;
+    margin-bottom: 25px;
+  }
   .padding-top-0-mb{
     padding-top: 0!important;
   }
   .listContent{
     //margin: 0;
-    padding: 0 20px;
+    padding: 0 49px;
     margin-left: 0!important;
     .titleContent{
       display: none;
@@ -467,6 +483,7 @@ export default {
     }
   }
   .carouselWrap{
+    margin-bottom: 58px;
     width: 100%;
     &:last-of-type{
       margin-bottom: 0!important;
@@ -504,7 +521,7 @@ export default {
     }
   }
   .adBanner{
-    margin-top: 20px;
+    margin: 16px 0 30px 0;
     .title{
       font-size: 10px;
       margin: 0;
@@ -537,6 +554,7 @@ export default {
   .titleBlock{
     font-size: 12px;
     text-align: center;
+    margin: 0;
   }
   .padding-20px{
     padding: 10px;
@@ -564,6 +582,8 @@ export default {
     }
   }
   .listContent{
+    padding: 0 49px;
+    margin-bottom: 65px;
     .itemContent{
       border: 1px solid black;
       font-size: 20.3px;
@@ -609,11 +629,13 @@ export default {
   }
   .blockImageBottom{
     margin-top: 0;
+    padding: 0 70px;
     .content{
       font-size: 32px;
       height: 150px;
-      margin: 0 30px;
-      width: calc(100% - 60px);
+      // margin: 0 30px;
+      margin: auto;
+      // width: calc(100% - 98px);
     }
   }
 }

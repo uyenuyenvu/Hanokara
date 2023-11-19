@@ -1,159 +1,181 @@
 <template>
-    <div class="container">
-      <div class="lang">
+<div class="container">
+    <div class="lang">
         <div class="flag">
-          <div class="itemLang" @click="$router.push('/publishViet')">
-            <img src="@/assets/images/publishPage/VietNam.png" alt="">
-            <p>Tiếng Việt</p>
-          </div>
-          <div class="itemLang inactive">
-            <img src="@/assets/images/publishPage/Japan.png" alt="">
-            <p>日本語翻訳</p>
-          </div>
-        </div>
-      </div>
-        <div class="newWrap">
-            <div class="titleBlock">
-              掲載について
+            <div class="itemLang" @click="$router.push('/publishViet')">
+                <img src="@/assets/images/publishPage/VietNam.png" alt="">
+                <p>Tiếng Việt</p>
             </div>
-          <div class="underLine">
+            <div class="itemLang inactive">
+                <img src="@/assets/images/publishPage/Japan.png" alt="">
+                <p>日本語翻訳</p>
+            </div>
+        </div>
+    </div>
+    <div class="newWrap">
+        <div class="titleBlock">
+            掲載について
+        </div>
+        <div class="underLine">
             ハノカラは月額固定費で
             <br>
             すべてのコンテンツがご利用できます。
-          </div>
-          <div class="checkListNote">
+        </div>
+        <div class="checkListNote">
             <div class="itemCheckList">
-              <img src="@/assets/images/publishPage/check-red.svg" alt="">
-              <div class="textCheckList">
-                店舗情報やSNS情報をハノカラと共有させて
-                拡散させたい！
-              </div>
+                <img src="@/assets/images/publishPage/check-red.svg" alt="">
+                <div class="textCheckList">
+                    店舗情報やSNS情報をハノカラと共有させて
+                    拡散させたい！
+                </div>
             </div>
 
             <div class="itemCheckList">
-              <img src="@/assets/images/publishPage/check-red.svg" alt="">
-              <div class="textCheckList">
-                オリジナル写真と動画で店舗・キャストの
-                アピールをしたい！
-              </div>
+                <img src="@/assets/images/publishPage/check-red.svg" alt="">
+                <div class="textCheckList">
+                    オリジナル写真と動画で店舗・キャストの
+                    アピールをしたい！
+                </div>
             </div>
 
             <div class="itemCheckList">
-              <img src="@/assets/images/publishPage/check-red.svg" alt="">
-              <div class="textCheckList">
-                他店舗との差を明確にして集客に結び付けたい！
-              </div>
+                <img src="@/assets/images/publishPage/check-red.svg" alt="">
+                <div class="textCheckList">
+                    他店舗との差を明確にして集客に結び付けたい！
+                </div>
             </div>
 
             <div class="itemCheckList">
-              <img src="@/assets/images/publishPage/check-red.svg" alt="">
-              <div class="textCheckList">
-                割引情報やイベント情報を告知したい！
-              </div>
+                <img src="@/assets/images/publishPage/check-red.svg" alt="">
+                <div class="textCheckList">
+                    割引情報やイベント情報を告知したい！
+                </div>
             </div>
-          </div>
-          <div class="underLine">
+        </div>
+        <div class="underLine">
             ハノカラのコンテンツ一覧
-          </div>
-          <div class="listContent">
-            <div class="itemRowContent">
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content1.png" alt="">
-                <p class="textContent">宣材写真撮影</p>
-              </div>
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content2.png" alt="">
-                <p class="textContent">宣材動画撮影</p>
-              </div>
+        </div>
+        <div class="listContent">
+            <div class="v-row">
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content1.png" alt="">
+                        <p class="textContent">宣材写真撮影</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content2.png" alt="">
+                        <p class="textContent">宣材動画撮影</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content3.png" alt="">
+                        <p class="textContent">店舗情報掲載</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content4.png" alt="">
+                        <p class="textContent">割引情報掲載</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content5.png" alt="">
+                        <p class="textContent">新着情報掲載</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content6.png" alt="">
+                        <p class="textContent">イベント情報掲載</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content7.png" alt="">
+                        <p class="textContent">フォトギャラリー掲載</p>
+                    </div>
+                </div>
+                <div class="v-col-xs-12 v-col-sm-12 v-col-lg-6  v-col-xl-6 ">
+
+                    <div class="itemContent">
+                        <img src="@/assets/images/publishPage/content8.png" alt="">
+                        <p class="textContent">日本語添削</p>
+                    </div>
+                </div>
             </div>
-            <div class="itemRowContent">
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content3.png" alt="">
-                <p class="textContent">店舗情報掲載</p>
-              </div>
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content4.png" alt="">
-                <p class="textContent">割引情報掲載</p>
-              </div>
-            </div>
-            <div class="itemRowContent">
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content5.png" alt="">
-                <p class="textContent">新着情報掲載</p>
-              </div>
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content6.png" alt="">
-                <p class="textContent">イベント情報掲載</p>
-              </div>
-            </div>
-            <div class="itemRowContent">
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content7.png" alt="">
-                <p class="textContent">フォトギャラリー掲載</p>
-              </div>
-              <div class="itemContent">
-                <img src="@/assets/images/publishPage/content8.png" alt="">
-                <p class="textContent">日本語添削</p>
-              </div>
-            </div>
-          </div>
-          <div class="underLine">
+        </div>
+        <div class="underLine">
             掲載料金
-          </div>
-          <div class="textPostingFee">
+        </div>
+        <div class="textPostingFee">
             上記コンテンツがすべてセットになって <br>
             最安月 <span> X00$</span> から掲載可能です！<br>
             まずは下記のお問い合わせフォームより<br>
             お問い合わせください。
-          </div>
-          <div class="titleBlock">
+        </div>
+        <div class="titleBlock">
             お問い合わせフォーム
-          </div>
-            <div class="feedback">
-                <div class="instruct">
-                  以下のフォームに必要事項をご記入の上、「送信する」<br>
-                  ボタンをクリックしてください。
+        </div>
+        <div class="feedback">
+            <div class="instruct">
+                以下のフォームに必要事項をご記入の上、「送信する」<br>
+                ボタンをクリックしてください。
+            </div>
+            <div class="form">
+                <div class="Form-Item">
+                    <p class="Form-Item-Label">
+                        <span class="Form-Item-Label-Required">必須</span>名前
+                    </p>
+                    <input type="text" v-model="name" class="Form-Item-Input" placeholder="例）CLUB ALICE">
                 </div>
-                <div class="form">
-                    <div class="Form-Item">
-                        <p class="Form-Item-Label">
-                            <span class="Form-Item-Label-Required">必須</span>名前
-                        </p>
-                        <input type="text" v-model="name" class="Form-Item-Input" placeholder="例）CLUB ALICE">
-                    </div>
-                    <div class="Form-Item">
-                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">任意</span>エリア</p>
-                        <input type="number" v-model="phoneNumber" class="Form-Item-Input" placeholder="例）キンマー">
-                    </div>
-                    <div class="Form-Item">
-                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>担当者名</p>
-                        <input type="email" v-model="email" class="Form-Item-Input" placeholder="例）山田 太郎">
-                    </div>
-                    <div class="Form-Item">
-                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
-                        <input type="email" v-model="email" class="Form-Item-Input" placeholder="例）0123456789">
-                    </div>
-                    <div class="Form-Item">
-                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-                        <input type="email" v-model="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
-                    </div>
-                    <div class="Form-Item">
-                        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容
-                        </p>
-                        <textarea class="Form-Item-Textarea" v-model="message" ></textarea>
-                    </div>
-                  <div class="buttonWrap">
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">任意</span>エリア</p>
+                    <input type="number" v-model="phoneNumber" class="Form-Item-Input" placeholder="例）キンマー">
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>担当者名</p>
+                    <input type="email" v-model="email" class="Form-Item-Input" placeholder="例）山田 太郎">
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+                    <input type="email" v-model="email" class="Form-Item-Input" placeholder="例）0123456789">
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                    <input type="email" v-model="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容
+                    </p>
+                    <textarea class="Form-Item-Textarea" v-model="message"></textarea>
+                </div>
+                <div class="buttonWrap">
                     <v-btn class="buttonMain" @click="sendContact">送信する</v-btn>
-                  </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
-import { API } from '@/axios-api.js';
-import {mapMutations} from "vuex";
+import {
+    API
+} from '@/axios-api.js';
+import {
+    mapMutations
+} from "vuex";
 
 export default {
     data() {
@@ -164,21 +186,32 @@ export default {
             message: ''
         };
     },
-  mounted() {
-    this.UPDATE_BREADCRUMBS([
-      {
-        title: 'ホーム',
-        url: '/'
-      },
-      {
-        title: ' お問い合わせ',
-      }
-    ])
-  },
+    created() {
+        window.addEventListener('resize', this.handleResize);
+    },
+    mounted() {
+        this.handleResize()
+        this.UPDATE_BREADCRUMBS([{
+                title: 'ホーム',
+                url: '/'
+            },
+            {
+                title: ' お問い合わせ',
+            }
+        ])
+    },
     methods: {
-      ...mapMutations(['UPDATE_BREADCRUMBS']),
+        ...mapMutations(['UPDATE_BREADCRUMBS', 'UPDATE_IMAGE_COMPARE']),
+        handleResize() {
+            let width = window.innerWidth;
+            if (width > 600) {
+                // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+            } else {
+                this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_PublicJP.png')
+            }
+        },
 
-      async sendContact() {
+        async sendContact() {
             try {
                 const response = await API.post('store_managers/contact/', {
                     contact_name: this.name,
@@ -200,56 +233,64 @@ export default {
 <style lang="scss" scoped>
 .container {
     padding: 50px 100px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.flag{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  .itemLang{
-    text-align: center;
-    margin: 10px;
-    cursor: pointer;
-    &.inactive{
-      opacity: 0.2;
-      cursor: unset;
-    }
-  }
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.listContent{
-  width: 100%;
-  .itemRowContent{
+.flag {
     display: flex;
-    justify-content: space-between;
-    .itemContent{
-      width: calc(50% - 10px);
-      border: 4.18px solid #FF789D;
-      border-radius: 11px;
-      align-items: center;
-      padding: 10px;
-      display: flex;
-      margin: 10px 0;
-      img{
-        margin-right: 20px;
-      }
-      .textContent{
-        font-size: 18.1px;
-        font-weight: bold;
-      }
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+    .itemLang {
+        text-align: center;
+        margin: 10px;
+        color: black;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &.inactive {
+            opacity: 0.2;
+            cursor: unset;
+            text-decoration: none;
+        }
     }
-  }
 }
-.textPostingFee{
-  font-size: 23.84px;
-  font-weight: bold;
-  text-align: center;
-  span{
+
+.listContent {
+    width: 100%;
+
+    .itemContent {
+        width: calc(50% - 10px);
+        border: 4.18px solid #FF789D;
+        border-radius: 11px;
+        align-items: center;
+        padding: 10px;
+        display: flex;
+        margin: 10px 0;
+
+        img {
+            margin-right: 20px;
+        }
+
+        .textContent {
+            font-size: 18.1px;
+            font-weight: bold;
+        }
+    }
+}
+
+.textPostingFee {
+    font-size: 23.84px;
     font-weight: bold;
-    color: red;
-  }
+    text-align: center;
+    color: black;
+
+    span {
+        font-weight: bold;
+        color: red;
+    }
 }
 
 .titleBlock {
@@ -264,35 +305,41 @@ export default {
 .newWrap {
     width: 80%;
     margin: auto;
-  .underLine{
-    font-size: 25.6px;
-    font-weight: bold;
-    color: #000;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 30px;
-    text-decoration: underline;
-    text-decoration-color: #FF789D;
-    text-decoration-thickness: 5px;
-    line-height: 66px;
-    text-underline-offset: 10px;
-  }
-  .checkListNote{
-    width: 100%;
-    border: 4.18px solid #FF789D;
-    border-radius: 11px;
-    padding: 20px;
-    .itemCheckList{
-      display: flex;
-      img{
-        margin-right: 20px;
-      }
-      .textCheckList{
-        font-size: 18.1px;
+
+    .underLine {
+        font-size: 25.6px;
         font-weight: bold;
-      }
+        color: #000;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+        text-decoration-color: #FF789D;
+        text-decoration-thickness: 5px;
+        line-height: 66px;
+        text-underline-offset: 10px;
     }
-  }
+
+    .checkListNote {
+        width: 100%;
+        border: 4.18px solid #FF789D;
+        border-radius: 11px;
+        padding: 20px;
+
+        .itemCheckList {
+            display: flex;
+
+            img {
+                margin-right: 20px;
+            }
+
+            .textCheckList {
+                font-size: 18.1px;
+                font-weight: bold;
+                color: black;
+            }
+        }
+    }
 }
 
 .feedback {
@@ -301,10 +348,11 @@ export default {
     width: 90%;
     margin: 50px auto;
     box-shadow: 0px 0px 4px 4px #ccc;
-  cursor: pointer;
-  :hover{
-    box-shadow: none;
-  }
+    cursor: pointer;
+
+    :hover {
+        box-shadow: none;
+    }
 }
 
 .instruct {
@@ -335,7 +383,7 @@ export default {
 
 .Form-Item:nth-child(6) {
     border-bottom: 2px solid #ccc;
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .Form-Item-Label {
@@ -378,9 +426,10 @@ export default {
     background: #E5E5E5;
     outline: none;
     border: none;
-    &:focus{
-      outline: none;
-      border: none;
+
+    &:focus {
+        outline: none;
+        border: none;
     }
 }
 
@@ -388,16 +437,56 @@ export default {
     .Form {
         margin-top: 40px;
     }
-
+    .feedback{
+      padding: 13px 23px 24px 21px;
+      margin-bottom: 63px;
+      .instruct{
+        margin-bottom: 40px;
+        font-size: 12px;
+      }
+    }
+    .textPostingFee{
+      margin-bottom: 53px;
+    }
+    .listContent{
+      .itemContent{
+        width: auto;
+        margin: 10px 15px;
+        img{
+          margin: 8px 17px 7px 0;
+        }
+        .textContent{
+          width: -webkit-fill-available;
+          color: black;
+          font-size: 19.7px;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+    }
     .instruct {
         font-size: 12px;
     }
 
+    .checkListNote {
+        width: auto !important;
+        padding: 22px 15px !important;
+        margin: 0 25px 97px 25px;
+
+        .itemCheckList {
+            img {
+                margin: 0 0 27px 13px;
+            }
+        }
+    }
+
+    .underLine {
+        margin-top: 95px !important;
+        margin-bottom: 45px !important;
+    }
+
     .Form-Item {
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding: 13px 0;
         display: flex;
     }
 
@@ -495,16 +584,18 @@ export default {
         }
     }
 }
-.buttonWrap{
-  text-align: center;
-  .buttonMain{
-    border-radius: 6px;
-    padding: 8px 15px;
-    display: inline-block;
+
+.buttonWrap {
     text-align: center;
-    background: #FF789D;
-    color: #fff;
-    font-size: 14px;
-  }
+
+    .buttonMain {
+        border-radius: 6px;
+        padding: 8px 15px;
+        display: inline-block;
+        text-align: center;
+        background: #FF789D;
+        color: #fff;
+        font-size: 14px;
+    }
 }
 </style>
