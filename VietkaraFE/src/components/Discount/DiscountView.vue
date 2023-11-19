@@ -74,7 +74,15 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['UPDATE_BREADCRUMBS']),
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_Discount.png')
+      }
+    },
     async fetchStores() {
       try {
         const response = await API.get('stores/discount/', {
@@ -100,7 +108,11 @@ export default {
     },
     // 他のメソッドをここに追加
   },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+  },
   mounted() {
+    this.handleResize()
     this.fetchStores(); // コンポーネントがマウントされたときに店舗のリストを取得
 
     this.UPDATE_BREADCRUMBS([

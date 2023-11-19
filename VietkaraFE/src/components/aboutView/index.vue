@@ -2,10 +2,21 @@
 import {mapMutations} from 'vuex'
 export default {
   methods:{
-    ...mapMutations(['UPDATE_BREADCRUMBS'])
-
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_About.png')
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
   },
   mounted() {
+    this.handleResize()
     this.UPDATE_BREADCRUMBS([
       {
         title: 'ホーム',
@@ -74,15 +85,15 @@ export default {
     font-size: 12px;
     padding: 8px 50px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 22px 0 38px 0;
   }
   .newWrap{
       width: 100%;
       .content{
         font-size: 12.7px;
         color: black;
-        margin: 30px 0;
-        padding: 20px;
+        margin-bottom: 30px;
+        padding: 0 19px;
         .contentTitle{
             margin: 10px 0;
         }

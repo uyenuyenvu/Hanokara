@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="v-row">
-      <div class="v-col-xs-12 v-col-lg-8">
+    <div class="v-row m-9">
+      <div class="v-col-xs-12 v-col-lg-8 p0">
         <div class="carouselWrap">
             <div class="banner">
                 <img class="picture" src="@/assets/images/storePage/storePage2.png" alt="">
@@ -222,6 +222,7 @@ export default {
   mounted() {
     // コンポーネントがマウントされたときにAPIを呼び出す
     this.fetchStoreDetails();
+    this.handleResize()
     this.UPDATE_BREADCRUMBS([
       {
         title: 'ホーム',
@@ -237,7 +238,15 @@ export default {
     ])
   },
   methods: {
-    ...mapMutations(['UPDATE_BREADCRUMBS']),
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_StorePage.png')
+      }
+    },
 
     async fetchStoreDetails() {
       try {
@@ -259,6 +268,9 @@ export default {
 <style lang="scss" scoped>
 .container{
   padding: 50px 100px;
+}
+.m-9{
+  margin: -12px;
 }
 .banner{
     margin: 0;
@@ -626,15 +638,47 @@ hr{
 }
 @media only screen and (max-width: 600px) {
   .infor {
+    margin-bottom: 62px;
     .inforTitle {
       background-color: #FF789D;
       color: white;
       border: 1px solid #929191;
+      padding: 8px 20px;
+      padding-left: 18px;
     }
     .contentInfor{
       border-bottom: none;
+      height: 39px;
+      border-bottom: 1.22px solid #929191;
     }
   }
+  .present{
+    margin-bottom: 64px;
+  }
+  .storePhotos{
+    margin-top: 30px;
+    .photos{
+      margin: 0 23px;
+      margin-bottom: 25px;
+      width: auto;
+      .photo{
+        height: 20vh;
+      }
+    }
+  }
+  .discount{
+    margin-bottom: 62px;
+  }
+  .btn-all-actor{
+    margin: 35px 22.5% 69px 22.5%;
+  }
+  .banner{
+    margin-top: -8px;
+    .logo{
+      top: 0;
+      left: 13px;
+    }
+  } 
   .container{
     padding: 0;
   }
@@ -687,7 +731,8 @@ hr{
     font-size: 12px;
     padding: 8px 50px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
+    margin-top: -7px;
   }
   .padding-20px{
     padding: 10px;

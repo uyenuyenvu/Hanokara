@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="v-row">
-      <div class="v-col-xs-12 v-col-lg-8 v-col-md-8">
+      <div class="v-col-xs-12 v-col-lg-8 v-col-md-8 p0">
 
         <div class="adBanner">
           <div class="title">【広告】</div>
@@ -17,7 +17,6 @@
                 <button class="btn"> 検索 </button>
               </div>
               <div class="categories">
-                    <div class="catTitle">※3つまで選択可能</div>
                       <div v-for="group in categories" :key="group.name">
                         <div
                           v-for="category in group.items"
@@ -106,7 +105,7 @@
         <div class="listContent">
           <div class="titleContent">【広告】</div>
           <v-row class="margin-top-0 margin-10-mb" no-gutters>
-            <div class="v-col-lg-12 v-col-md-12 v-col-sm-6 v-col-6 "
+            <div class="v-col-lg-12 v-col-md-12 v-col-sm-6 v-col-6 p0"
                  v-for="index in [1,2,3,4]"
                  :key="index"
             ><div class="itemContent">A広告</div></div>
@@ -167,7 +166,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['UPDATE_BREADCRUMBS']),
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
     async fetchStores() {
       try {
         const response = await API.get('stores/', {
@@ -193,6 +192,18 @@ export default {
       }
     },
     // 他のメソッドをここに追加
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_StoreSearch.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_StoreSearch.png')
+
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
   },
   mounted() {
     this.fetchStores(); // コンポーネントがマウントされたときに店舗のリストを取得
@@ -206,6 +217,7 @@ export default {
         title: 'お店をさがす',
       },
     ])
+    this.handleResize()
   }
 };
 </script>
@@ -213,6 +225,9 @@ export default {
 <style lang="scss" scoped>
 .container{
   padding: 38px 295px;
+}
+.p0{
+  padding: 0;
 }
 .mb{
   display: none;
@@ -408,7 +423,7 @@ export default {
       // }
       .categories {
         border: 3px solid #FF789D;
-        width: 100%;
+        // width: 100%;
         margin-top: 30px;
         padding: 10px 30px;
         display: flex;
@@ -522,6 +537,17 @@ export default {
       display: none;
     }
   }
+  .carouselWrap{
+    .blockImageBottom{
+      .title{
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .backShop{
+    margin: 58px 0 42px 0;
+    margin: auto;
+  }
   .listContent{
     .itemContent{
       border: none;
@@ -582,7 +608,8 @@ export default {
     }
   }
   .adBanner{
-    margin-top: 20px;
+    padding-top: 8px;
+    padding-bottom: 23px;
     .title{
       font-size: 10px;
       margin: 0;
@@ -601,14 +628,24 @@ export default {
       width: calc(100% - 30px);
       .frm{
         .categories{
-          padding: 10px;
+          padding: 17px 15px;
+          margin-top: 25px;
+          margin-left: 19px;
+          margin-right: 22px;
+          margin-bottom: 62px;
           label{
             font-size: 12px;
           }
         }
+        .frm1{
+          padding: 0 55px;
+        }
       }
       .titleItem{
         font-size: 13.03px;
+        padding: 0 55px;
+        margin-bottom: 5px;
+        margin-top: 22px;
       }
     }
   }
@@ -657,7 +694,7 @@ export default {
         margin: 10px 10px 10px 0;
       }
       &:nth-child(odd){
-        margin: 10px;
+        margin: 4px;
 
       }
     }
@@ -698,8 +735,8 @@ export default {
     .content{
       font-size: 21px;
       height: 150px;
-      margin: 0 30px;
-      width: calc(100% - 60px);
+      margin: 0 51px;
+      width: calc(100% - 102px);
     }
   }
 }
@@ -709,7 +746,7 @@ export default {
   align-items: center;
 }
 .listContent{
-  margin-left: 50px;
+  padding: 0 46px 0 43px;
   position: relative;
   .titleContent{
     color: #AFADAD;
@@ -718,15 +755,16 @@ export default {
     text-align: center;
   }
   .itemContent{
-    height: 165px;
+    height: 80px;
+    width: max-content;
     display: flex;
+    margin: 4px !important;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
     font-weight: bold;
     font-size: 36px;
+    padding: 60px;
     color:black;
-    margin-bottom: 20px;
     background-color: #D9D9D9;
   }
 }

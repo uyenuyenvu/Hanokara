@@ -156,7 +156,6 @@ export default {
         this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
       }else{
         this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_Home.png')
-
       }
     }
   },

@@ -57,6 +57,7 @@ export default {
         };
     },
   mounted() {
+    this.handleResize()
     this.UPDATE_BREADCRUMBS([
       {
         title: 'ホーム',
@@ -64,7 +65,15 @@ export default {
     ])
   },
   methods: {
-    ...mapMutations(['UPDATE_BREADCRUMBS']),
+    ...mapMutations(['UPDATE_BREADCRUMBS','UPDATE_IMAGE_COMPARE']),
+    handleResize() {
+     let width = window.innerWidth;
+      if (width>600){
+        // this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/PC_Home.png')
+      }else{
+        this.UPDATE_IMAGE_COMPARE('../../src/assets/images/compare/MB_Contact.png')
+      }
+    },
     async sendContact() {
             try {
                 const response = await API.post('/api/v1/store_managers/contact/', {
@@ -80,7 +89,10 @@ export default {
                 // エラー処理（例：エラーメッセージの表示）
             }
         }
-    }
+    },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+  },
 };
 </script>
 
@@ -194,19 +206,21 @@ export default {
 
 @media screen and (max-width: 600px) {
     .Form {
-        margin-top: 40px;
+        // margin-top: 40px;
     }
-
+    .feedback{
+        width: calc(100% - 56px);
+        padding: 19px 18px 0 17px;
+    }
     .instruct {
         font-size: 12px;
+        margin-bottom: 32px;
     }
 
     .Form-Item {
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding: 12px 0 13px 0;
         display: flex;
+        border-bottom: 1px solid #ccc;
     }
 
     .Form-Item-Label {
@@ -283,13 +297,14 @@ export default {
 @media only screen and (max-width: 600px) {
     .container {
         padding: 0;
+        margin-bottom: 76px;
     }
 
     .titleBlock {
         font-size: 12px;
         padding: 8px 50px;
         text-align: center;
-        margin-bottom: 20px;
+        margin: 22px 0 39px 0;
     }
 
     .newWrap {
@@ -298,9 +313,14 @@ export default {
         .comment {
             font-size: 12px;
             color: black;
-            padding: 20px;
+            padding: 0 36px;
+            margin: 0;
+            margin-bottom: 43px;
         }
     }
+    .buttonWrap{
+        margin: 23px 0;
+    } 
 }
 .buttonWrap{
   text-align: center;
