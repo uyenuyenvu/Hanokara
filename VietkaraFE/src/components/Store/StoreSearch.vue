@@ -18,22 +18,25 @@
               </div>
               <div class="categories">
                       <div v-for="group in categories" :key="group.name">
-                        <div
-                          v-for="category in group.items"
-                          :key="category.id"
-                          class="checkbox-wrapper"
+                        <template
+                            v-for="(category, index) in group.items"
+                            :key="category.id">
+                          <div
+                              class="checkbox-wrapper"
                           >
-                          <input
-                            type="checkbox"
-                            v-model="selectedCategories[category.model]"
-                            :id="category.id"
-                            :name="category.name"
-                            :value="category.value"
-                            :disabled="isCheckboxDisabled && !isSelected(category)"
-                            @change="handleCheckboxChange(category)"
-                          >
-                          <label :for="category.id">{{ category.label }}</label>
-                        </div>
+                            <input
+                                type="checkbox"
+                                v-model="selectedCategories[category.model]"
+                                :id="category.id"
+                                :name="category.name"
+                                :value="category.value"
+                                :disabled="isCheckboxDisabled && !isSelected(category)"
+                                @change="handleCheckboxChange(category)"
+                            >
+                            <label :for="category.id">{{ category.label }}</label>
+                          </div>
+
+                        </template>
                       </div>
                     </div>
               <!-- <div class="categories">
@@ -482,9 +485,9 @@ export default {
 }
 .newWrap{
   width: 100%;
-  overflow-y: scroll;
+  //overflow-y: scroll;
   padding-top: 20px;
-  height: 610px;
+  //height: 610px;
   .itemNew{
     display: flex;
     border-bottom: 2px solid #AFADAD;
@@ -540,26 +543,28 @@ export default {
   .carouselWrap{
     .blockImageBottom{
       .title{
-        margin-bottom: 6px;
+        margin-bottom: 1px;
+        font-size: 13px;
       }
     }
   }
   .backShop{
+    width: 47%;
     margin: 58px 0 42px 0;
     margin: auto;
+    padding: 3px;
+    font-size: 15px;
   }
+
   .listContent{
     .itemContent{
       border: none;
       font-size: 16px!important;
       &:nth-child(even){
-        margin: 10px 10px 10px 0;
         border: none;
       }
       &:nth-child(odd){
         border: none;
-        margin: 10px;
-
       }
     }
   }
@@ -568,6 +573,7 @@ export default {
   }
   .carouselWrap{
     width: 100%;
+    margin-bottom: 38.5px;
 
     &:last-of-type{
       margin-bottom: 0!important;
@@ -618,8 +624,11 @@ export default {
       font-size: 20px;
       height: 55px;
       margin: auto;
-      width: calc(100% - 150px);
+      width: calc(100% - 180px);
     }
+  }
+  .note{
+    padding: 0px 42px;
   }
 
   .search{
@@ -627,25 +636,44 @@ export default {
       margin: auto;
       width: calc(100% - 30px);
       .frm{
+        .checkbox-wrapper{
+          margin-bottom: 8px;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
         .categories{
-          padding: 17px 15px;
-          margin-top: 25px;
-          margin-left: 19px;
-          margin-right: 22px;
+          padding: 14px 15px;
+          margin-top: 23px;
+          margin-left: 16px;
+          margin-right: 19px;
           margin-bottom: 62px;
+          gap: 5px;
+          input[type=checkbox]{
+            width: 15.5px;
+            height: 15.5px;
+          }
           label{
             font-size: 12px;
           }
         }
         .frm1{
-          padding: 0 55px;
+          padding: 0 57px 0 50px;
+          .searchIp{
+            width: 76%;
+            border: 3px solid #FF789D;
+            padding: 0px 0 0px 6px;
+          }
+          .btn{
+            padding: 0;
+          }
         }
       }
       .titleItem{
         font-size: 13.03px;
-        padding: 0 55px;
-        margin-bottom: 5px;
-        margin-top: 22px;
+        padding: 0 53px;
+        margin-bottom: 2.5px;
+        margin-top: 17px;
       }
     }
   }
@@ -653,7 +681,8 @@ export default {
     display: flex;
     justify-content: center;
     font-size: 12px;
-    padding: 5px 0 6px 0px;
+    height: 30px;
+    padding: 0px 0 2px 0px;
     margin: 0 auto;
   }
   .padding-20px{
@@ -677,7 +706,7 @@ export default {
     margin: 0;
   }
   .listContent{
-    margin: 0;
+    margin: 0 0 54px 0;
   }
   .imageStyle1{
     padding: 3px 3px 0;
@@ -690,13 +719,10 @@ export default {
     .itemContent{
       border: 1px solid black;
       font-size: 20.3px;
-      &:nth-child(even){
-        margin: 10px 10px 10px 0;
-      }
-      &:nth-child(odd){
-        margin: 4px;
-
-      }
+      height: 74px!important;
+      padding: 0!important;
+      width: calc(100% - 6px) !important;
+      margin: 4px 4px 0 6px !important;
     }
   }
   :deep{
@@ -706,7 +732,7 @@ export default {
   }
   .newWrap{
     padding-top: 10px;
-    height: 475px;
+    //height: 475px;
     .itemNew{
       padding: 10px 0;
       .avatarNew{
@@ -735,8 +761,8 @@ export default {
     .content{
       font-size: 21px;
       height: 150px;
-      margin: 0 51px;
-      width: calc(100% - 102px);
+      margin: 0 61.5px;
+      width: calc(100% - 120px);
     }
   }
 }
@@ -758,7 +784,7 @@ export default {
     height: 80px;
     width: max-content;
     display: flex;
-    margin: 4px !important;
+    margin: 4px;
     justify-content: center;
     align-items: center;
     font-weight: bold;

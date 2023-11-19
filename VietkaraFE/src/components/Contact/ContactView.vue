@@ -302,7 +302,7 @@ export default {
 
     .titleBlock {
         font-size: 12px;
-        padding: 8px 50px;
+        padding: 5px 50px;
         text-align: center;
         margin: 22px 0 39px 0;
     }
@@ -320,7 +320,7 @@ export default {
     }
     .buttonWrap{
         margin: 23px 0;
-    } 
+    }
 }
 .buttonWrap{
   text-align: center;

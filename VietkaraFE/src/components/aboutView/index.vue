@@ -83,7 +83,7 @@ export default {
   }
   .titleBlock{
     font-size: 12px;
-    padding: 8px 50px;
+    padding: 5px 50px;
     text-align: center;
     margin: 22px 0 38px 0;
   }

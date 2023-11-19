@@ -5,7 +5,7 @@
             <hr>
     </div>
     <div class="thanks">
-        お問い合わせ内容は送信されました。
+        お問い合わせ内容は送信されました。 <br>
         ありがとうございます。
     </div>
     <div class="back">
@@ -115,7 +115,10 @@ export default {
     margin: 0;
   }
   .back{
-    margin: 82px 0 135px 0;
+    margin: 18px 0 83px 0;
+    .btn-all-actor{
+      padding: 6px 0;
+    }
   }
   .listContent{
     margin: 0;
@@ -142,14 +145,17 @@ export default {
     }
     .thanks{
         font-size:18.78px;
-        width: 65%;
+        width: max-content;
         color: #000;
+      line-height: 41px;
     }
     .uploadTitle{
         font-size: 25px;
-        margin: 141px 0 49px 0;
+        margin: 133px 0 39px 0;
         hr{
-            margin-left: 25%;
+          margin: 0 auto;
+          width: 266px;
+          margin-top: 3px;
         }
     }
 }

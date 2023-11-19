@@ -129,6 +129,8 @@ export default {
   }
   .titleBlock{
     margin: 22px 0 38px 0;
+    font-size: 12px;
+    padding: 5px 50px;
   }
   .margin-10-mb{
     margin: 10px;
@@ -154,9 +156,15 @@ export default {
   .mb{
     display: block;
   }
+  .title{
+    margin-top: 56px;
+  }
   .privacyPolicy{
+    font-size: 12.7px;
+    line-height: 17px;
     padding: 0 19px;
-    margin-bottom: 80px;
+    margin-bottom: 185px;
+    letter-spacing: -0.3px;
   }
     .btn-all-actor{
         margin-bottom: 50px;

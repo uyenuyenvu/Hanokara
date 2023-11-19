@@ -7,11 +7,12 @@ import { mdiMenu } from '@mdi/js';
       return{
         mobileMenu: mdiMenu,
         isShowMenuMobile: false,
-        showMenu: false
+        showMenu: false,
+        isShowImageCompare: false
       }
     },
     computed: mapState([
-      'breadcrumbs'
+      'breadcrumbs','imageCompare'
     ]),
     methods:{
       toggleMenu() {
@@ -29,6 +30,8 @@ import { mdiMenu } from '@mdi/js';
 </script>
 
 <template>
+  <img v-if="isShowImageCompare" :src="imageCompare" alt="" class="image-compare">
+  <b class="text-compare" @click="isShowImageCompare=!isShowImageCompare">Compare</b>
   <div v-show="!isShowMenuMobile" class="iconMenuMB">
       <v-icon color="white" @click="toggleMenu">{{ mobileMenu }}</v-icon>
   </div>
@@ -270,7 +273,7 @@ import { mdiMenu } from '@mdi/js';
       border: 1px solid #D9D9D9;/* 1ピクセルのグレーの境界線 */
   }
   .logoWrap{
-    padding: 24px 10px 0px;
+    padding: 26px 10px 0px;
     // position: relative;
     z-index: 9999;
     .topText{
@@ -302,7 +305,8 @@ import { mdiMenu } from '@mdi/js';
     }
     .breadcrumbs{
       font-size: 9px;
-      padding-left: 50px;
+      padding-left: 32px;
+      padding-top: 0;
     }
   }
 }

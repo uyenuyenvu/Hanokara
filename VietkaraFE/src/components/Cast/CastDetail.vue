@@ -501,16 +501,30 @@ hr {
     .mb-padding-left-0 {
         padding-left: 0 !important;
     }
-
+  .container{
+    margin: 0 auto!important;
+  }
+.btn-all-actor{
+  font-size: 10px;
+  padding: 4px 0;
+  border: 2px #FF789D solid;
+  margin: 0px 22.5% 14px 22.5%;
+  &:last-of-type{
+    margin-bottom: 70px;
+  }
+}
     .titleContent {
         margin: 0;
+      padding: 5px 50px;
+      text-align: center;
+      font-size: 12px;
     }
 
     .adv {
-        margin: 24px 24px 58px 24px;
-        width: auto;
-        height: 300px;
-        padding: 11px 47px 11px 42px;
+      margin: 25px 28px 58px 24px;
+      width: auto;
+      height: 156px;
+      padding: 11px 47px 11px 42px;
 
         iframe {
             width: -webkit-fill-available;
@@ -519,40 +533,52 @@ hr {
     }
 
     .gallery {
-        margin: 13px 26px 70px 26px;
+        margin: 13px 26px 72px 26px;
         padding: 18px 19px 27px 19px;
     }
 
     .cast {
-        margin: 23px 37px 0 41px;
+        margin: 15px 55px 0 49px;
 
         .inf {
             color: #000;
             font-weight: bold;
+          font-size: 12px;
+          margin-bottom: 5px;
         }
     }
 
     .cmt {
-        margin: 6px 37px 13px 40px;
-        font-weight: bold;
-        color: #000;
+      margin: 3px 52px 4px 47px;
+      font-weight: bold;
+      color: #000;
+      font-size: 13px;
+      padding: 0 10px;
     }
 
     .catTitle {
-        margin-bottom: 5px;
+      margin-bottom: 5px;
+      font-size: 11px;
+      padding-left: 10px;
     }
 
     .titleA {
-        margin-bottom: 5px;
-        margin-top: 5px;
+      margin-bottom: 0;
+      margin-top: 0;
+      font-size: 11px;
     }
 
     .titleB {
-        margin-bottom: 0;
+      margin-bottom: 5px;
+      font-size: 17px;
     }
 
     .avtCast {
-        height: 310px;
+        height: 238px;
+      .status{
+        font-size: 13px;
+        padding: 0 10px;
+      }
     }
 
     .container {
@@ -585,9 +611,9 @@ hr {
         border-bottom: 3px solid #ccc;
 
         .inforTitle {
-            font-size: 14.21px;
+            font-size: 11.21px;
             padding: 2px 17px;
-            height: 29px;
+            height: 23px;
             color: white;
             background-color: #FF789D;
             font-weight: bold;
@@ -608,11 +634,10 @@ hr {
     }
 
     .logo {
-        margin: 0 39px 63px 41px;
+        margin: 0 57px 59px 51px;
 
         img {
-            margin-top: 5px;
-            padding: 5px;
+            margin-top: 10px;
         }
     }
 

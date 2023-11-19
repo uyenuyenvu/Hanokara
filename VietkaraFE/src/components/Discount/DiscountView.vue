@@ -249,7 +249,7 @@ export default {
   font-size: 22px;
   font-weight: bold;
   color: white;
-  padding: 10px 50px;
+  padding: 6px 50px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -393,9 +393,9 @@ export default {
 }
 .newWrap{
   width: 100%;
-  overflow-y: scroll;
+  //overflow-y: scroll;
   padding-top: 20px;
-  height: 610px;
+  //height: 610px;
   .itemNew{
     display: flex;
     border-bottom: 2px solid #AFADAD;
@@ -442,10 +442,14 @@ export default {
   .container{
     padding: 0;
   }
+  .note{
+    padding: 0 30px;
+  }
   .backShop{
     font-size: 10px;
-    width: 40%;
-    padding: 10px 0;
+    width: 45%;
+    padding: 7px 0;
+    border-radius: 30px;
     a{
       text-decoration: underline;
       font-weight: bold;
@@ -472,18 +476,15 @@ export default {
       border: none;
       font-size: 16px!important;
       &:nth-child(even){
-        margin: 10px 10px 10px 0;
         border: none;
       }
       &:nth-child(odd){
         border: none;
-        margin: 10px;
-
       }
     }
   }
   .carouselWrap{
-    margin-bottom: 58px;
+    margin-bottom: 54px;
     width: 100%;
     &:last-of-type{
       margin-bottom: 0!important;
@@ -521,7 +522,7 @@ export default {
     }
   }
   .adBanner{
-    margin: 16px 0 30px 0;
+    margin: 8px 0 30px 0;
     .title{
       font-size: 10px;
       margin: 0;
@@ -530,7 +531,7 @@ export default {
       font-size: 20px;
       height: 55px;
       margin: auto;
-      width: calc(100% - 150px);
+      width: calc(100% - 180px);
     }
   }
 
@@ -587,13 +588,8 @@ export default {
     .itemContent{
       border: 1px solid black;
       font-size: 20.3px;
-      &:nth-child(even){
-        margin: 10px 10px 10px 0;
-      }
-      &:nth-child(odd){
-        margin: 10px;
-
-      }
+      height: 74px!important;
+      margin: 4px 2px 0 2px!important;
     }
   }
   :deep{
@@ -603,7 +599,8 @@ export default {
   }
   .newWrap{
     padding-top: 10px;
-    height: 475px;
+    //height: 475px;
+    //height: 1136px;
     .itemNew{
       padding: 10px 0;
       .avatarNew{
@@ -627,9 +624,17 @@ export default {
   .mb{
     display: block;
   }
+  .carouselWrap{
+    .blockImageBottom{
+      .title{
+        margin-bottom: 1px;
+        font-size: 13px;
+      }
+    }
+  }
   .blockImageBottom{
     margin-top: 0;
-    padding: 0 70px;
+    padding: 0 63px;
     .content{
       font-size: 32px;
       height: 150px;

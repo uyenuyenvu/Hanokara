@@ -671,14 +671,20 @@ hr{
   }
   .btn-all-actor{
     margin: 35px 22.5% 69px 22.5%;
+    padding: 5px;
+    border: 2px #FF789D solid;
   }
   .banner{
     margin-top: -8px;
+    .picture{
+      height: 180px;
+      object-fit: fill;
+    }
     .logo{
       top: 0;
       left: 13px;
     }
-  } 
+  }
   .container{
     padding: 0;
   }
@@ -729,7 +735,7 @@ hr{
   .titleBlock{
     background-color: #2D2427;
     font-size: 12px;
-    padding: 8px 50px;
+    padding: 5px 50px;
     text-align: center;
     margin-bottom: 1px;
     margin-top: -7px;

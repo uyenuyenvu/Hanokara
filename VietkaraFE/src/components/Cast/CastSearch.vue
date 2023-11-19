@@ -888,21 +888,15 @@ export default {
     }
 
     .listContent {
-        margin: 0 72px 60px 66px !important;
+        margin: 0 49px 60px 49px !important;
 
         .itemContent {
-            // border: 1px solid black;
+            height: 74px!important;
             border: none;
-            font-size: 20.3px;
+            font-size: 17.41px!important;
+          margin: 4px 2px 0 2px;
+          margin-bottom: 0!important;
 
-            &:nth-child(even) {
-                margin: 10px 10px 10px 0;
-            }
-
-            &:nth-child(odd) {
-                margin: 10px;
-
-            }
         }
     }
 
@@ -949,30 +943,44 @@ export default {
         .title {
             font-size: 16px;
             margin: 0;
+            //opacity: 0;
         }
 
         .content {
             font-size: 25px;
-            height: 55px;
-            margin: auto;
-            margin-bottom: 30px;
-            padding: 35px 0;
-            width: calc(100% - 280px);
+          height: 52px;
+          margin: auto;
+          margin-bottom: 30px;
+          padding: 0px 0;
+          width: calc(100% - 183px);
         }
     }
 
+  .keyword-search-btn{
+    width: 200px;
+    border-radius: 25px;
+    font-size: 13px;
+    height: 25px!important;
+  }
+
+
+  .titleBlock {
+    margin: 0;
+    padding: 5px 10px;
+  }
     .search {
         .titleBlock {
             margin: 0;
+          padding: 5px 10px;
         }
 
         .itemSearch {
             margin: auto;
             // width: calc(100% - 30px);
-            margin-top: 27px;
+            margin-top: 22px;
 
             .titleItem {
-                padding-left: 60px;
+                padding-left: 70px;
                 color: #b5b5b5;
                 font-size: 12px;
             }
@@ -980,8 +988,14 @@ export default {
             .frm {
                     margin-bottom: 19px;
                 .frm1 {
-                    padding: 0 52px 0 60px;
+                    padding: 0 71px 0 64px;
                     margin-bottom: 19px;
+                  .searchIp{
+                    padding:  0 0 0 8px;
+                  }
+                  .btn{
+                    padding: 0;
+                  }
                 }
 
                 .categories {
@@ -1039,22 +1053,6 @@ export default {
         }
     }
 
-    .listContent {
-        .itemContent {
-            // border: 1px solid black;
-            font-size: 20.3px;
-
-            &:nth-child(even) {
-                margin: 10px 10px 10px 0;
-            }
-
-            &:nth-child(odd) {
-                margin: 10px;
-
-            }
-        }
-    }
-
     :deep {
         .v-window__controls {
             padding: 0 5px !important;
@@ -1093,16 +1091,26 @@ export default {
         display: block;
     }
 
-    .blockImageBottom {
-        margin-top: 0;
-
-        .content {
-            font-size: 32px;
-            height: 150px;
-            margin: 0 82px 0 76px;
-            width: auto;
-        }
+  .carouselWrap{
+    .blockImageBottom{
+      .title{
+        margin-bottom: 1px;
+        font-size: 13px;
+      }
     }
+  }
+  .blockImageBottom {
+    margin-top: 0;
+    padding: 0 49px;
+
+    .content {
+      font-size: 32px;
+      height: 150px;
+      // margin: 0 30px;
+      margin: auto;
+      // width: calc(100% - 98px);
+    }
+  }
 }
 
 .listContent {
